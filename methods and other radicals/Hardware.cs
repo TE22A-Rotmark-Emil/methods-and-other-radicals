@@ -1,18 +1,23 @@
 public class Hardware{
-    string name;
-    float price;
-    protected string type = "undefined";
+    protected string Name;
+    float Price;
+    protected string Type = "undefined";
 
     public Hardware(string item, float cost){
-        name = item;
-        price = cost;
+        Name = item;
+        Price = cost;
     }
 
     public string GetName(){
-        return name;
+        return Name;
     }
 
     public float GetPrice(){
-        return price;
+        return Price;
+    }
+
+    public virtual void ListSpecs(){
+        Console.WriteLine($"Cost: {Price}$");
+        Console.WriteLine($"Type: {Type}");
     }
 }
